@@ -52,7 +52,10 @@ class AxisChartScaffoldWidget extends StatelessWidget {
 
   List<Widget> stackWidgets(BoxConstraints constraints) {
     List<Widget> widgets = [
-      chart,
+      Padding(
+        padding: data.titlesData.allSidesPadding,
+        child: chart,
+      )
     ];
 
     int insertIndex(bool drawBelow) => drawBelow ? 0 : widgets.length;
